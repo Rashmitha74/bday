@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Spandana ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+        
+        body {
+            background: #111;
+            color: white;
+        }
+        
+        .screen {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .screen.active {
+            display: flex;
+        }
+        
+        .content {
+            width: 90%;
+            max-width: 900px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        button {
+            border: none;
+            padding: 14px 25px;
+            border-radius: 30px;
+            font-size: 15px;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: 0.3s;
+        }
+        
+        button:hover {
+            transform: scale(1.05);
+        }
+        /* =========================
+   SCREEN 1 - PERSONAL OPENING
+========================= */
+        
+        #screen1 {
+            background: linear-gradient(135deg, #fff8f3, #f8eee8, #fffdf9);
+            color: #3b3030;
+        }
+        
+        .opening-small {
+            font-size: 18px;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+        
+        #screen1 h1 {
+            font-size: clamp(38px, 8vw, 75px);
+            margin-bottom: 20px;
+        }
+        
+        #screen1 p {
+            font-size: clamp(17px, 3vw, 23px);
+            line-height: 1.7;
+            max-width: 700px;
+            margin: auto;
+        }
+        
+        .personal-btn {
+            background: #3b3030;
+            color: white;
+        }
+        /* =========================
+   SCREEN 2 - MEMORIES VIDEO
+========================= */
+        
+        #screen2 {
+            background: #111;
+            flex-direction: column;
+        }
+        
+        .video-title {
+            position: absolute;
+            top: 7%;
+            z-index: 20;
+            width: 90%;
+        }
+        
+        .video-title h2 {
+            font-size: clamp(25px, 5vw, 45px);
+            margin-bottom: 10px;
+        }
+        
+        .video-title p {
+            font-size: 17px;
+            opacity: .85;
+        }
+        
+        .video-wrapper {
+            width: 90%;
+            height: 68%;
+            max-width: 1000px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #memoryVideo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 18px;
+            background: #000;
+            box-shadow: 0 0 40px rgba(255, 255, 255, .12);
+        }
+        
+        .video-buttons {
+            position: absolute;
+            bottom: 5%;
+            z-index: 20;
+        }
+        
+        .skip-light {
+            background: rgba(255, 255, 255, .12);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, .3);
+        }
+        /* =========================
+   SCREEN 3 - SMALL SURPRISE
+========================= */
+        
+        #screen3 {
+            background: linear-gradient(135deg, #fffaf5, #f4ebe5);
+            color: #332b2b;
+        }
+        
+        .surprise-box {
+            max-width: 750px;
+        }
+        
+        .surprise-box h1 {
+            font-size: clamp(35px, 7vw, 65px);
+            margin-bottom: 25px;
+        }
+        
+        .surprise-box p {
+            font-size: clamp(18px, 3vw, 25px);
+            line-height: 1.7;
+        }
+        
+        .surprise-btn {
+            background: #332b2b;
+            color: white;
+        }
+        /* =========================
+   SCREEN 4 - SEOUL
+========================= */
+        
+        #screen4 {
+            background: radial-gradient(circle at 70% 20%, rgba(255, 255, 255, .3), transparent 15%), linear-gradient(#171a3d, #343d73 50%, #12152c);
+        }
+        
+        .moon {
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: #fff8df;
+            top: 12%;
+            right: 13%;
+            box-shadow: 0 0 50px rgba(255, 248, 223, .4);
+        }
+        
+        .seoul {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 35%;
+            background: linear-gradient(90deg, #0d1025 5%, transparent 5% 8%, #0d1025 8% 14%, transparent 14% 17%, #0d1025 17% 23%, transparent 23% 26%, #0d1025 26% 33%, transparent 33% 36%, #0d1025 36% 43%, transparent 43% 46%, #0d1025 46% 54%, transparent 54% 57%, #0d1025 57% 64%, transparent 64% 67%, #0d1025 67% 75%, transparent 75% 78%, #0d1025 78% 86%, transparent 86% 89%, #0d1025 89%);
+        }
+        
+        .seoul-content {
+            z-index: 5;
+        }
+        
+        .seoul-content h1 {
+            font-size: clamp(50px, 11vw, 110px);
+            letter-spacing: 8px;
+        }
+        
+        .seoul-content p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        
+        .purple-btn {
+            background: #8d5cff;
+            color: white;
+            box-shadow: 0 0 25px rgba(141, 92, 255, .6);
+        }
+        /* =========================
+   SCREEN 5 - CONCERT
+========================= */
+        
+        #screen5 {
+            background: radial-gradient(circle at center 30%, #5f2a9e 0%, #241047 35%, #08040e 75%);
+        }
+        
+        .concert-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+        /* moving beams */
+        
+        .beam {
+            position: absolute;
+            top: -20%;
+            width: 90px;
+            height: 150%;
+            background: linear-gradient( transparent, rgba(180, 120, 255, .16), transparent);
+            transform: rotate(25deg);
+            animation: beamMove 4s infinite alternate ease-in-out;
+        }
+        
+        .beam:nth-child(1) {
+            left: 10%;
+        }
+        
+        .beam:nth-child(2) {
+            left: 30%;
+            animation-delay: 1s;
+        }
+        
+        .beam:nth-child(3) {
+            left: 55%;
+            animation-delay: 2s;
+        }
+        
+        .beam:nth-child(4) {
+            left: 78%;
+            animation-delay: .5s;
+        }
+        
+        @keyframes beamMove {
+            from {
+                transform: rotate(20deg) translateX(-50px);
+            }
+            to {
+                transform: rotate(-20deg) translateX(80px);
+            }
+        }
+        /* stadium lights */
+        
+        .stadium-lights {
+            position: absolute;
+            top: 5%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .stadium-lights span {
+            width: 13px;
+            height: 13px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #fff, 0 0 40px #a96cff;
+        }
+        /* LED screen */
+        
+        .led-screen {
+            position: absolute;
+            top: 14%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 65%;
+            height: 22%;
+            background: linear-gradient(145deg, #160b29, #32105b, #12051f);
+            border: 5px solid #7e43bd;
+            box-shadow: 0 0 25px #8c49d8, inset 0 0 30px rgba(255, 255, 255, .08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .led-screen h1 {
+            font-family: Arial, sans-serif;
+            font-weight: 900;
+            font-size: clamp(55px, 14vw, 150px);
+            letter-spacing: 15px;
+            color: #fff;
+            text-shadow: 0 0 10px #fff, 0 0 30px #b96dff, 0 0 60px #7c31c9;
+        }
+        /* stage */
+        
+        .stage {
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 72%;
+            height: 14%;
+            background: linear-gradient(#7e4ba4, #291139);
+            clip-path: polygon(7% 0, 93% 0, 100% 100%, 0 100%);
+            box-shadow: 0 -10px 40px rgba(171, 92, 255, .5);
+        }
+        /* performers */
+        
+        .performers {
+            position: absolute;
+            bottom: 32%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+        }
+        
+        .person {
+            width: 55px;
+            height: 105px;
+            position: relative;
+        }
+        
+        .person .head {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #161019;
+            position: absolute;
+            top: 0;
+            left: 15px;
+        }
+        
+        .person .body {
+            width: 38px;
+            height: 70px;
+            border-radius: 20px 20px 5px 5px;
+            background: #110b16;
+            position: absolute;
+            top: 25px;
+            left: 9px;
+        }
+        
+        .person.center {
+            transform: scale(1.3);
+        }
+        
+        .mic {
+            position: absolute;
+            width: 4px;
+            height: 60px;
+            background: #ddd;
+            top: 24px;
+            right: -7px;
+            transform: rotate(-20deg);
+        }
+        /* crowd */
+        
+        .crowd {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 25%;
+            background: radial-gradient(circle at 10% 70%, #120a18 0 18px, transparent 19px), radial-gradient(circle at 20% 60%, #120a18 0 25px, transparent 26px), radial-gradient(circle at 30% 70%, #120a18 0 20px, transparent 21px), radial-gradient(circle at 40% 60%, #120a18 0 28px, transparent 29px), radial-gradient(circle at 50% 70%, #120a18 0 25px, transparent 26px), radial-gradient(circle at 60% 60%, #120a18 0 28px, transparent 29px), radial-gradient(circle at 70% 70%, #120a18 0 22px, transparent 23px), radial-gradient(circle at 80% 60%, #120a18 0 28px, transparent 29px), radial-gradient(circle at 90% 70%, #120a18 0 22px, transparent 23px), #050308;
+        }
+        /* light sticks */
+        
+        .lightsticks {
+            position: absolute;
+            bottom: 10%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 0 4%;
+        }
+        
+        .lightsticks span {
+            width: 8px;
+            height: 60px;
+            background: #b96cff;
+            box-shadow: 0 0 10px #c87aff, 0 0 25px #8c35e8;
+            border-radius: 5px;
+            transform: rotate(var(--r));
+            animation: stick 1.5s infinite alternate;
+        }
+        
+        @keyframes stick {
+            to {
+                transform: rotate(calc(var(--r) * -1)) translateY(-10px);
+            }
+        }
+        
+        .concert-content {
+            z-index: 20;
+            position: absolute;
+            top: 40%;
+            width: 100%;
+            padding: 0 20px;
+        }
+        
+        .intro-text {
+            font-size: clamp(18px, 3vw, 28px);
+            line-height: 1.6;
+            text-shadow: 0 0 15px #000;
+        }
+        
+        .reveal-text {
+            display: none;
+        }
+        
+        .reveal-text h1 {
+            font-size: clamp(35px, 8vw, 75px);
+            color: #fff;
+            text-shadow: 0 0 15px #fff, 0 0 30px #b96cff;
+        }
+        
+        .reveal-text p {
+            font-size: 22px;
+            margin-top: 15px;
+        }
+        
+        .song-btn {
+            background: #a65cff;
+            color: white;
+            box-shadow: 0 0 30px rgba(170, 90, 255, .7);
+        }
+        
+        .next-concert {
+            display: block;
+            margin: 15px auto;
+            background: rgba(255, 255, 255, .12);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, .3);
+        }
+        /* =========================
+   SCREEN 6 - JUNGKOOK
+========================= */
+        
+        #screen6 {
+            background: radial-gradient(circle at center, #57326e, #211127 55%, #09050d);
+        }
+        
+        .jk-content {
+            max-width: 800px;
+        }
+        
+        .jk-content h1 {
+            font-size: clamp(42px, 9vw, 85px);
+            text-shadow: 0 0 30px #d28cff;
+        }
+        
+        .jk-content p {
+            font-size: clamp(18px, 3vw, 25px);
+            line-height: 1.7;
+            margin-top: 20px;
+        }
+        
+        .jk-icon {
+            font-size: 90px;
+            margin-bottom: 20px;
+        }
+        /* =========================
+   SCREEN 7 - SNOWDROP
+========================= */
+        
+        #screen7 {
+            background: linear-gradient(rgba(8, 18, 35, .55), rgba(7, 10, 20, .85)), radial-gradient(circle at 70% 15%, #d9e6ff, #35445f 30%, #090d18 75%);
+        }
+        
+        .snow {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+        
+        .snow span {
+            position: absolute;
+            top: -20px;
+            color: white;
+            font-size: 20px;
+            animation: fall linear infinite;
+        }
+        
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+        
+        .snowdrop-content {
+            z-index: 5;
+        }
+        
+        .snowdrop-content h1 {
+            font-size: clamp(45px, 9vw, 90px);
+            margin-bottom: 20px;
+        }
+        
+        .snowdrop-content p {
+            font-size: 20px;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: auto;
+        }
+        /* =========================
+   SCREEN 8 - LETTER
+========================= */
+        
+        #screen8 {
+            background: linear-gradient(135deg, #fffaf7, #f4e9e2);
+            color: #342b2b;
+            overflow-y: auto;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        
+        .letter {
+            width: 90%;
+            max-width: 800px;
+            padding: 40px 0;
+            text-align: left;
+            margin: auto;
+        }
+        
+        .letter h1 {
+            text-align: center;
+            font-size: clamp(35px, 7vw, 60px);
+            margin-bottom: 30px;
+        }
+        
+        .letter p {
+            font-size: 18px;
+            line-height: 1.9;
+            margin-bottom: 18px;
+        }
+        
+        .letter .birthday {
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        /* =========================
+   SCREEN 9 - FINAL
+========================= */
+        
+        #screen9 {
+            background: radial-gradient(circle at center, #5e2b87, #20102c 50%, #09050d);
+        }
+        
+        .final-content h1 {
+            font-size: clamp(45px, 10vw, 90px);
+            text-shadow: 0 0 30px #c475ff;
+        }
+        
+        .final-content p {
+            font-size: clamp(19px, 3vw, 27px);
+            line-height: 1.7;
+            margin-top: 25px;
+        }
+        
+        .heart {
+            font-size: 70px;
+            margin-top: 25px;
+            animation: heartbeat 1.2s infinite;
+        }
+        
+        @keyframes heartbeat {
+            50% {
+                transform: scale(1.15);
+            }
+        }
+        
+        .small-note {
+            margin-top: 25px;
+            font-size: 15px;
+            opacity: .7;
+        }
+        /* mobile */
+        
+        @media(max-width:600px) {
+            .moon {
+                width: 90px;
+                height: 90px;
+                right: 8%;
+            }
+            .led-screen {
+                width: 85%;
+                height: 18%;
+            }
+            .performers {
+                width: 85%;
+            }
+            .person {
+                transform: scale(.75);
+            }
+            .person.center {
+                transform: scale(1);
+            }
+            .stage {
+                width: 90%;
+            }
+            .video-wrapper {
+                height: 60%;
+            }
+            .letter {
+                padding-top: 80px;
+            }
+            .letter p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+     SCREEN 1
+========================= -->
+
+    <section class="screen active" id="screen1">
+        <div class="content">
+            <div class="opening-small">For someone very special ❤️</div>
+
+            <h1>Happy Birthday,<br>Spandana! 🎂</h1>
+
+            <p>
+                I wanted to make something a little different for you. Not just a birthday wish, but a small collection of memories, surprises and things I want you to know.
+            </p>
+
+            <button class="personal-btn" onclick="goTo(2)">
+            Start ❤️
+        </button>
+        </div>
+    </section>
+
+
+    <!-- =========================
+     SCREEN 2 - VIDEO
+========================= -->
+
+    <section class="screen" id="screen2">
+
+        <div class="video-title">
+            <h2>A little collection of memories 🤍</h2>
+            <p>Some moments that became special because they were with you.</p>
+        </div>
+
+        <div class="video-wrapper">
+            <video id="memoryVideo" controls playsinline>
+            <source src="memory.mp4" type="video/mp4">
+            Your browser does not support this video.
+        </video>
+        </div>
+
+        <div class="video-buttons">
+            <button class="skip-light" onclick="goTo(3)">
+            Skip Video →
+        </button>
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+     SCREEN 3 - SURPRISE
+========================= -->
+
+    <section class="screen" id="screen3">
+
+        <div class="surprise-box">
+
+            <h1>And that's just a little part of our story... 🤍</h1>
+
+            <p>
+                But wait...<br><br> I have one small surprise left for you. 👀
+            </p>
+
+            <button class="surprise-btn" onclick="goTo(4)">
+            Okay... show me 👀
+        </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+     SCREEN 4 - SEOUL
+========================= -->
+
+    <section class="screen" id="screen4">
+
+        <div class="moon"></div>
+        <div class="seoul"></div>
+
+        <div class="seoul-content">
+
+            <h1>SEOUL</h1>
+
+            <p>
+                A place you've dreamed about...
+            </p>
+
+            <p>
+                So I thought your little birthday universe needed to take you there. 💜
+            </p>
+
+            <button class="purple-btn" onclick="goTo(5); startConcert();">
+            Take me there ✈️
+        </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+     SCREEN 5 - CONCERT
+========================= -->
+
+    <section class="screen" id="screen5">
+
+        <div class="concert-bg">
+
+            <div class="beam"></div>
+            <div class="beam"></div>
+            <div class="beam"></div>
+            <div class="beam"></div>
+
+            <div class="stadium-lights">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="led-screen">
+                <h1>BTS</h1>
+            </div>
+
+            <div class="performers">
+
+                <div class="person">
+                    <div class="head"></div>
+                    <div class="body"></div>
+                </div>
+
+                <div class="person">
+                    <div class="head"></div>
+                    <div class="body"></div>
+                </div>
+
+                <div class="person center">
+                    <div class="head"></div>
+                    <div class="body"></div>
+                    <div class="mic"></div>
+                </div>
+
+                <div class="person">
+                    <div class="head"></div>
+                    <div class="body"></div>
+                </div>
+
+                <div class="person">
+                    <div class="head"></div>
+                    <div class="body"></div>
+                </div>
+
+            </div>
+
+            <div class="stage"></div>
+
+            <div class="crowd"></div>
+
+            <div class="lightsticks">
+                <span style="--r:-8deg"></span>
+                <span style="--r:8deg"></span>
+                <span style="--r:-5deg"></span>
+                <span style="--r:7deg"></span>
+                <span style="--r:-9deg"></span>
+                <span style="--r:6deg"></span>
+                <span style="--r:-6deg"></span>
+                <span style="--r:9deg"></span>
+                <span style="--r:-8deg"></span>
+                <span style="--r:7deg"></span>
+                <span style="--r:-6deg"></span>
+                <span style="--r:8deg"></span>
+            </div>
+
+        </div>
+
+
+        <div class="concert-content">
+
+            <div class="intro-text" id="concertIntro">
+                🎤 Can you hear them?<br> The lights are going down...
+            </div>
+
+            <div class="reveal-text" id="concertReveal">
+
+                <h1>SPANDANA... 💜</h1>
+
+                <h1>LOOK WHO'S ON THE STAGE.</h1>
+
+                <p>
+                    This concert is just for you.
+                </p>
+
+                <button class="song-btn" onclick="playSong()">
+                🎵 PLAY THE SONG
+            </button>
+
+                <button class="next-concert" onclick="goTo(6); stopSong();">
+                💜 Too excited? Show me what's next →
+            </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+     SCREEN 6 - JUNGKOOK
+========================= -->
+
+    <section class="screen" id="screen6">
+
+        <div class="jk-content">
+
+            <div class="jk-icon">🎤💜</div>
+
+            <h1>And then...</h1>
+
+            <p>
+                Because I know there's one person you definitely wanted to see. 👀
+            </p>
+
+            <p>
+                <strong>Jungkook. 💜</strong>
+            </p>
+
+            <p>
+                Your birthday universe couldn't possibly end without giving you your moment.
+            </p>
+
+            <button class="purple-btn" onclick="goTo(7)">
+            One more surprise →
+        </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+     SCREEN 7 - SNOWDROP
+========================= -->
+
+    <section class="screen" id="screen7">
+
+        <div class="snow" id="snow"></div>
+
+        <div class="snowdrop-content">
+
+            <h1>Snowdrop ❄️</h1>
+
+            <p>
+                And now... something a little different.
+            </p>
+
+            <p>
+                A little piece of that emotional, beautiful K-drama world you love.
+            </p>
+
+            <p>
+                Some stories stay with us long after the screen goes dark.
+            </p>
+
+            <button class="personal-btn" onclick="goTo(8)">
+            Something I want to tell you ❤️
+        </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+     SCREEN 8 - LETTER
+========================= -->
+
+    <section class="screen" id="screen8">
+
+        <div class="letter">
+
+            <h1>For You, Spandana ❤️</h1>
+
+            <p>
+                When I think about what I want to say or what wishes I want to give you, honestly… I just go blank. I don't know why. Maybe because there are so many things I want to say, but I don't know how to put them into words.
+            </p>
+
+            <p>
+                You are genuinely such a unique and special person to me.
+            </p>
+
+            <p>
+                You are always there whenever I need you. You understand me without making me explain everything. You never judge me, and you are someone I can share literally anything with.
+            </p>
+
+            <p>
+                I never have to think twice before telling you something. There is never any hesitation, and I think that is one of the most special things about our friendship.
+            </p>
+
+            <p>
+                And you are such a sweetheart. ❤️
+            </p>
+
+            <p>
+                You have such a pure soul. I've never really heard you speak badly about people. Even when someone does something wrong, you somehow try to understand their situation instead of immediately finding something bad in them. I really admire that about you.
+            </p>
+
+            <p>
+                But listen… you are <strong>too sweet for this world sometimes.</strong> 😭
+            </p>
+
+            <p>
+                So please, don't overthink everything. If you can't completely stop overthinking, at least try to avoid giving every little thing so much space in your mind.
+            </p>
+
+            <p>
+                And please learn to be a little rude sometimes. 😂 Not actually rude… just a little more strict.
+            </p>
+
+            <p>
+                You are strong enough, but sometimes you are so kind and understanding that people might take advantage of that. So don't be afraid to say no. Don't be afraid to stand up for yourself. You don't always have to be the person who understands everyone.
+            </p>
+
+            <p>
+                Be kind, but also protect yourself. ❤️
+            </p>
+
+            <p>
+                And finally…
+            </p>
+
+            <p class="birthday">
+                Happy, happy, happy, happy, happy birthday to my best friend! 🥹❤️
+            </p>
+
+            <p>
+                I wish you all the luck, all the happiness, all the love, and everything beautiful that you truly deserve.
+            </p>
+
+            <p>
+                Stay exactly who you are.
+            </p>
+
+            <p>
+                And no matter how much you grow, change, or where life takes you, I hope you always know that you have someone who will be there for you.
+            </p>
+
+            <p class="birthday">
+                Happy Birthday, Spandana. ❤️
+            </p>
+
+            <p style="text-align:center;">
+                That's enough before I start getting emotional. 😭😂
+            </p>
+
+            <div style="text-align:center;">
+                <button class="personal-btn" onclick="goTo(9)">
+                One last thing... →
+            </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+     SCREEN 9 - FINAL
+========================= -->
+
+    <section class="screen" id="screen9">
+
+        <div class="final-content">
+
+            <h1>Happy Birthday,<br>Spandana! 🎂</h1>
+
+            <p>
+                May this year bring you beautiful memories, peaceful days, unexpected happiness, and everything your heart wishes for.
+            </p>
+
+            <div class="heart">💜</div>
+
+            <p>
+                Keep smiling. Keep being you.
+            </p>
+
+            <div class="small-note">
+                Made with lots of love, just for you.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+     AUDIO
+========================= -->
+
+    <audio id="jungkookSong">
+    <source src="jungkook-song.mpeg" type="audio/mpeg">
+</audio>
+
+
+    <script>
+        let currentScreen = 1;
+
+        function goTo(number) {
+
+            document.querySelectorAll(".screen").forEach(screen => {
+                screen.classList.remove("active");
+            });
+
+            document.getElementById("screen" + number).classList.add("active");
+
+            currentScreen = number;
+
+            if (number !== 2) {
+                const video = document.getElementById("memoryVideo");
+
+                if (video) {
+                    video.pause();
+                }
+            }
+
+            if (number === 7) {
+                createSnow();
+            }
+        }
+
+
+        /* =========================
+           MEMORY VIDEO
+        ========================= */
+
+        const memoryVideo = document.getElementById("memoryVideo");
+
+        memoryVideo.addEventListener("ended", function() {
+
+            setTimeout(function() {
+                goTo(3);
+            }, 1500);
+
+        });
+
+
+        /* =========================
+           SONG
+        ========================= */
+
+        const song = document.getElementById("jungkookSong");
+
+        function playSong() {
+
+            song.currentTime = 0;
+
+            song.play().catch(function(error) {
+                console.log("Audio could not start:", error);
+            });
+        }
+
+        function stopSong() {
+
+            song.pause();
+            song.currentTime = 0;
+        }
+
+
+        /* =========================
+           CONCERT REVEAL
+        ========================= */
+
+        function startConcert() {
+
+            const intro = document.getElementById("concertIntro");
+            const reveal = document.getElementById("concertReveal");
+
+            intro.style.display = "block";
+            reveal.style.display = "none";
+
+            setTimeout(function() {
+
+                intro.style.display = "none";
+                reveal.style.display = "block";
+
+            }, 3000);
+        }
+
+
+        /* =========================
+           SNOW
+        ========================= */
+
+        function createSnow() {
+
+            const snow = document.getElementById("snow");
+
+            if (snow.children.length > 0) {
+                return;
+            }
+
+            for (let i = 0; i < 35; i++) {
+
+                const flake = document.createElement("span");
+
+                flake.innerHTML = "❄";
+
+                flake.style.left = Math.random() * 100 + "%";
+
+                flake.style.animationDuration =
+                    (5 + Math.random() * 7) + "s";
+
+                flake.style.animationDelay =
+                    Math.random() * 5 + "s";
+
+                flake.style.opacity =
+                    0.3 + Math.random() * 0.7;
+
+                flake.style.fontSize =
+                    (10 + Math.random() * 18) + "px";
+
+                snow.appendChild(flake);
+            }
+        }
+    </script>
+
+</body>
+
+</html>
